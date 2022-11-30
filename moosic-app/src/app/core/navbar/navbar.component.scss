@@ -1,0 +1,54 @@
+.navigation {
+  background-color: #40e0d0;
+  width: 100%;
+  border: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.navbar {
+  text-align: center;
+  overflow: hidden;
+  list-style: none;
+  padding: 10px;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+}
+
+li {
+  margin: 0 10px;
+}
+li.left {
+  float: left;
+}
+li.right {
+  float: right;
+}
+
+li a {
+    color:#fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: Garamond, serif;
+   }
+
+.navbar a:hover {
+  background: #ffffff;
+  color: #40e0d0;
+}
+
+.navigation .active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+img { 
+    max-width: 2.9rem;
+    max-height: 2.9rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0rem;
+  }

@@ -1,0 +1,40 @@
+.footer {
+    background-color: #40e0d0;
+    width: 98.8%;
+    border: #fff;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .footerBar {
+    text-align: center;
+    overflow: hidden;
+    list-style: none;
+    padding: 10px;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
+  li {
+    margin: 0 10px;
+    float: right;
+  }
+  li a {
+    color:#fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: Garamond, serif;
+   }
+   .footer.imgLink a:hover {
+    background: #40e0d0;
+   }
+   .footerBar a:hover {
+    background: #ffffff;
+    color: #40e0d0;
+  }
+  img { 
+    max-width: 1.2rem;
+    max-height: 1.2rem;
+  }
