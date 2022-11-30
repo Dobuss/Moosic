@@ -21,15 +21,16 @@ const songSchema = new Schema({
     type: String,
     required: [true, "Please add an image for this song"],
   },
+  rating: { type: Number, default: 0 },
   owner: {
     type: Types.ObjectId,
     ref: "User",
   },
   dateCreated: {
-    type: String, 
-    required: true, 
-    default: () => (new Date()).toISOString()
-}
+    type: String,
+    required: true,
+    default: () => new Date().toISOString(),
+  },
 });
 
 const Song = model("Song", songSchema);

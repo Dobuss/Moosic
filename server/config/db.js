@@ -2,16 +2,12 @@ const mongoose = require("mongoose");
 
 const CONNECTION_STRING = "mongodb://localhost:27017/Moosic";
 
-module.exports = async (app) => {
-    try {
-      mongoose.connect(CONNECTION_STRING, {
+module.exports = () => {
+     return mongoose.connect(CONNECTION_STRING, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
       });
-      console.log("Connected to DB");
-    } catch (error) {
-      console.error(error.message);
-      process.exit(1);
-    }
   };
   
