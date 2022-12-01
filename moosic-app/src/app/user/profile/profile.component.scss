@@ -1,0 +1,132 @@
+#user {
+    width: 50%;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 47px;
+    margin-bottom: 47px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+  
+  .user-logo img {
+    display: inline-block;
+    margin-left: 40%;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .user-info h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  
+  .profile-songs {
+    display: flex;
+    justify-content:space-evenly;
+    margin: 5%;
+    margin-bottom: 50px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+  }
+  
+  .profile-songs .liked-songs,
+  .created-songs, .playlists {
+    margin: 4px, 4px;
+    padding: 4px;
+    background-color: #b393d3;
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: justify;
+    border: 1px solid black;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: turquoise;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffeae7;
+  }
+  
+  .profile-songs .liked-songs .section-title {
+    text-align: center;
+    color: white;
+  }
+  
+  .profile-songs .created-songs .section-title {
+    text-align: center;
+    color: white;
+  }
+  .profile-songs .playlists .section-title {
+    text-align: center;
+    color: white;
+  }
+  
+  .profile-songs .info {
+    padding: 10px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.853);
+    border-radius: 10%;
+    color: black;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  
+  .profile-songs .title {
+    font-size: 22px;
+    text-align: center;
+    height: 40%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+  }
+  
+  .profile-songs .author {
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .profile-songs .see-more {
+    background-color: turquoise;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .profile-songs a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .no-song-in-profile {
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    margin-top: 30px;
+  }
+  

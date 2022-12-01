@@ -28,10 +28,12 @@
     text-decoration: none;
     font-family: Garamond, serif;
    }
-   .footer.imgLink a:hover {
-    background: #40e0d0;
-   }
-   .footerBar a:hover {
+
+   .footerBar li:nth-child(2) > a:hover {
+    background: #ffffff;
+    color: #40e0d0;
+  }
+  .footerBar li:nth-child(1) > a:nth-child(1):hover {
     background: #ffffff;
     color: #40e0d0;
   }

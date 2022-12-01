@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { CatalogComponent } from './songs/catalog/catalog.component';
+import { CreateSongComponent } from './songs/create-song/create-song.component';
 import { TermsComponent } from './terms/terms.component';
 import { LoginComponent } from './user/login/login.component';
 import { ProfileComponent } from './user/profile/profile.component';
@@ -40,6 +42,14 @@ const routes: Routes = [
 {
   path: 'profile',
   component: ProfileComponent
+},
+{
+  path: 'catalog',
+  component: CatalogComponent
+},
+{
+  path: 'catalog/create',
+  component: CreateSongComponent
 },
 ];
 
