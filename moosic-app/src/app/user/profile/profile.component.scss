@@ -107,20 +107,22 @@
   }
   
   .profile-songs .see-more {
-    background-color: turquoise;
     border-radius: 10px;
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
+    justify-content:space-between;
     margin-top: 10px;
+    margin-right: 10px;
   }
   
   .profile-songs a {
-    text-decoration: none;
-    font-size: 14px;
-    color: white;
-    font-weight: bold;
+  background-color: turquoise;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
   }
   
   .no-song-in-profile {

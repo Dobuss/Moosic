@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { CatalogComponent } from './songs/catalog/catalog.component';
 import { CreateSongComponent } from './songs/create-song/create-song.component';
+import { EditSongComponent } from './songs/edit-song/edit-song.component';
 import { TermsComponent } from './terms/terms.component';
 import { LoginComponent } from './user/login/login.component';
 import { ProfileComponent } from './user/profile/profile.component';
@@ -16,7 +18,7 @@ const routes: Routes = [
   pathMatch: 'full',
   redirectTo: 'home'
 },{
-  path: '',
+  path: 'home',
   component: HomeComponent
 },
 {
@@ -51,6 +53,14 @@ const routes: Routes = [
   path: 'catalog/create',
   component: CreateSongComponent
 },
+{
+  path: 'catalog/edit',
+  component: EditSongComponent
+},
+{
+  path: '**',
+  component: NotFoundComponent
+}
 ];
 
 @NgModule({
