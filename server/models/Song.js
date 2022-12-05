@@ -31,6 +31,7 @@ const songSchema = new Schema({
     required: true,
     default: () => new Date().toISOString(),
   },
+  likes: [{ type: Schema.Types.ObjectId, ref: 'User' }],
 });
 
 const Song = model("Song", songSchema);

@@ -1,15 +1,12 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const cors = require('cors');
+const session = require('../middlewares/session');
+const trimBody = require('../middlewares/trimBody');
 
 module.exports = (app) => {
-    app.use(
-        cors({
-            credentials: true,
-            origin: 'http://localhost:4200',
-            allowedHeaders: ['Content-Type', 'X-Authorization']
-        })
-    );
+    app.use('/static', express.static('static'));
+    app.use(express.urlencoded({extended: true}));
+    app.use(trimBody('password'));
     app.use(cookieParser());
-    app.use(express.json());
+    app.use(session());
 };
