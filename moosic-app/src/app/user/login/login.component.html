@@ -1,11 +1,15 @@
 <div class="wrapper">
 <div class="login-box">
     <h1>Login</h1>
-    <form>
+    <form  class="login">
         <label>Email</label>
-        <input type="text" placeholder="Email.." name="email" value=>
+        <input ngModel type="text" placeholder="Email.." name="email" value=>
+        <p class="error">Email is required!</p>
+        <p class="error">Please enter a valid email!></p>
         <label>Password</label>
-        <input type="password" placeholder="Password.." name="password">
+        <input ngModel type="password" placeholder="Password.." name="password">
+        <p class="error">Password is required!</p>
+        <p class="error">Password must be at least 6 characters!</p>
         <input type="submit" value="Login">
     </form>
     <p>Don't have an account yet? <a href="/register">Register here</a></p>

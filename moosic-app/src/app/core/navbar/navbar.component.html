@@ -2,13 +2,18 @@
 <img src="../../../assets/M.png" alt="logo">
   <ul class="navbar">
         <!--All users-->
-        <li class="left"><a href="/home"> Home </a></li>
-        <li class="left"><a href="/about"> About </a></li>
+        <li class="left"><a routerLink="/home"> Home </a></li>
+        <li class="left"><a routerLink="/about"> About </a></li>
         <!--Logged in users-->
-        <li class="left"><a href="/catalog"> Browse songs </a></li>
-        <li class="right"><a href="/profile"> Profile </a></li>
+        <div class="loggedIn" *ngIf="isLoggedIn">
+        <li class="left"><a routerLink="/catalog"> Browse songs </a></li>
+        <li class="right"><a routerLink="/auth/logout"> Logout </a></li>
+        <li class="right"><a routerLink="/auth/profile"> Profile </a></li>
+      </div>
         <!--Guest users-->
-        <li class="right"><a href="/login"> Login </a></li>
-        <li class="right"><a href="/register"> Register </a></li>
+        <div class="guest" *ngIf="!isLoggedIn">
+        <li class="right"><a routerLink="/auth/login"> Login </a></li>
+        <li class="right"><a routerLink="/auth/register"> Register </a></li>
+      </div>
     </ul>
 </div>

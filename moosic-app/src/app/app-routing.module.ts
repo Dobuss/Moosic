@@ -9,6 +9,7 @@ import { CreateSongComponent } from './songs/create-song/create-song.component';
 import { EditSongComponent } from './songs/edit-song/edit-song.component';
 import { TermsComponent } from './terms/terms.component';
 import { LoginComponent } from './user/login/login.component';
+import { LogoutComponent } from './user/logout/logout.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { RegisterComponent } from './user/register/register.component';
 
@@ -34,15 +35,19 @@ const routes: Routes = [
   component: ContactComponent
 },
 {
-  path: 'register',
+  path: 'auth/register',
   component: RegisterComponent
 },
 {
-  path: 'login',
+  path: 'auth/login',
   component: LoginComponent
 },
 {
-  path: 'profile',
+  path: 'auth/logout',
+  component: LogoutComponent
+},
+{
+  path: 'auth/profile',
   component: ProfileComponent
 },
 {
