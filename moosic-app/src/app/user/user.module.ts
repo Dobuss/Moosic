@@ -3,8 +3,10 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
-import { FormsModule } from '@angular/forms';
 import { LogoutComponent } from './logout/logout.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -17,7 +19,9 @@ import { LogoutComponent } from './logout/logout.component';
   ],
   imports: [
     CommonModule,
-    FormsModule
-  ]
+    FormsModule,
+    ReactiveFormsModule,
+    SharedModule
+  ],
 })
 export class UserModule { }

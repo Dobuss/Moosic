@@ -54,6 +54,10 @@ const routes: Routes = [
       {
         path: 'profile',
         component: ProfileComponent,
+        canActivate: [AuthActivate],
+        data: {
+          loginRequired: true
+        }
       },
     ],
   },

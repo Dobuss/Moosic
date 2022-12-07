@@ -23,7 +23,7 @@ import { SongsModule } from './songs/songs.module'
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    SongsModule
+    SongsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
