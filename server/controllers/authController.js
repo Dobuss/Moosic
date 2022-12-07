@@ -7,8 +7,8 @@ const authController = require("express").Router();
 
 authController.post("/register", isGuest(),
   body("username").isLength({ min: 2 }).withMessage("Username must be at least 2 characters"),
-  body("email").isLength({ min: 10 }).withMessage("Email must be at least 10 characters"),
-  body("password").isLength({ min: 4 }).withMessage("Password must be at least 4 characters"),
+  body("email").isLength({ min: 5 }).withMessage("Email must be at least 5 characters"),
+  body("password").isLength({ min: 6 }).withMessage("Password must be at least 6 characters"),
   async (req, res) => {
     try {
       const { errors } = validationResult(req);

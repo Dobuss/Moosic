@@ -1,15 +1,43 @@
 <div class="wrapper">
 <div class="register-box">
     <h1>Register</h1>
-    <form class="register" >
+    <form [formGroup]="form" class="register" (ngSubmit)="registerHandler()">
+
+        <!--Username-->
+
         <label>Username</label>
-        <input type="text" placeholder="Username.." name="username" value="">
+        <input type="text" placeholder="Username.." formControlName="username" value="">
+        <p *ngIf="form.get('username')?.touched 
+        && form.get('username')?.invalid" class="error">
+        Username must be at least 2 characters!</p>
+
+        <!--Email-->
+
         <label>Email</label>
-        <input type="text" placeholder="Email.." name="email" value="">
+        <input type="text" placeholder="Email.." formControlName="email" name="email" value="">
+        <p *ngIf="form.get('email')?.touched 
+        && form.get('email')?.invalid" class="error">
+        Please enter a valid email address!</p>
+
+        <ng-container formGroupName="pass">
+
+        <!--Password-->
+
         <label>Password</label>
-        <input type="password" placeholder="Password.." name="password">
+        <input type="password" placeholder="Password.." formControlName="password" name="password">
+        <p *ngIf="form.get('pass')?.get('password')?.touched 
+        && form.get('pass')?.get('password')?.invalid" class="error">
+        Password must be at least 6 characters!</p>
+
+        <!--Repass-->
+
         <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm Password.." name="repass">
+        <input type="password" placeholder="Confirm Password.." formControlName="repass" name="repass">
+        <p *ngIf="form.get('pass')?.get('repass')?.touched 
+        && form.get('pass')?.errors?.['samenessValidator']" class="error">
+        Password and Confirm Password do not match!</p>
+
+        </ng-container>
         <input type="submit" value="Submit">
     </form>
     <p>Already have an account? <a href="/auth/login">Login here</a></p>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth-service.service';
 
@@ -9,25 +10,22 @@ import { AuthService } from '../auth-service.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
+  form = this.fb.group({
+    email: [
+      '',
+      [
+        Validators.required,
+        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+      ],
+    ],
+    password: ['', [Validators.required, Validators.minLength(6)]],
+  });
 
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router,
-    private authService: AuthService
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
-  loginHandler(form: NgForm): void {
-    // this.authService.user = {
-    //   username: 'testUser',
-    //   email: 'testEmail',
-    //   photo:
-    //     'https://i.pinimg.com/564x/89/95/52/8995526e78420e73c181a220a8b2710d.jpg',
-    //   songs: [],
-    //   favSongs: [],
-    // };
-    // const returnUrl =
-    //   this.activatedRoute.snapshot.queryParams['returnUrl'] || '/';
-
-    // this.router.navigate([returnUrl]);
-  }
+  loginHandler(): void {}
 }

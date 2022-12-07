@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {CoreModule} from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TermsComponent } from './terms/terms.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SongsModule } from './songs/songs.module'
+import { UserModule } from './user/user.module';
+import { NgForm } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { SongsModule } from './songs/songs.module'
     AppRoutingModule,
     CoreModule,
     SongsModule,
+    UserModule
   ],
-  providers: [],
+  providers: [NgForm],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

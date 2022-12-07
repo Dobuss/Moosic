@@ -1,19 +1,23 @@
 <div class="wrapper">
 <div class="login-box">
     <h1>Login</h1>
-    <form class="login">
+    <form [formGroup]="form" (ngSubmit)="loginHandler()" class="login">
+
+        <!--Email-->
+
         <label>Email</label>
-        <input type="text" ngModel required placeholder="Email.." name="email" value=>
+        <input type="text" formControlName="email" placeholder="Email.." name="email" value=>
+        <p *ngIf="form.get('email')?.touched 
+        && form.get('email')?.invalid" class="error">Please enter a valid email!!</p>
+
+        <!--Password-->
+        
         <label>Password</label>
-        <input type="password" ngModel placeholder="Password.." name="password">
+        <input type="password" formControlName="password" placeholder="Password.." name="password">
+        <p *ngIf="form.get('password')?.touched 
+        && form.get('password')?.invalid" class="error">Password must be at least 6 characters!</p>
         <input type="submit" value="Login">
     </form>
-    <p>Don't have an account yet? <a routerLink="/auth/register">Register here</a></p>
-</div>
-<div class="errorContainer">
-    <p>Email is required!</p>
-    <p>Please enter a valid email!</p>
-    <p>Password is required!</p>
-    <p>Password must be at least 6 characters!</p>
+    <p>Don't have an account yet? <a href="/auth/register">Register here</a></p>
 </div>
 </div>

@@ -1,6 +1,6 @@
 .wrapper {
     width: 100%;
-    height: 39vw;
+    height: auto;
     margin-top: 47px;
     margin-bottom: 47px;
     font-family: Comic Sans MS, Comic Sans, cursive;
@@ -9,7 +9,7 @@
 .register-box {
     color: white;
     width: 660px;
-    height: 500px;
+    height: auto;
     margin: auto;
     margin-top: 47px;
     background-color: #b393d3;
@@ -57,8 +57,7 @@
   .register-box form input[type="submit"] {
     width: 150px;
     height: 35px;
-    margin-top: 20px;
-    float: right;
+    margin-left: 230px;
     border: none;
     background-color: turquoise;
     color: white;
@@ -70,10 +69,10 @@
     color: turquoise;
   }
   
-  .register-box p {
+  .register-box .error, p {
     color: white;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 5px;
     font-size: 15px;
   }
   
